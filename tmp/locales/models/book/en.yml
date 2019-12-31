@@ -1,0 +1,7 @@
+﻿en:
+attributes:
+    isbn: "ISBN"
+    title: "Title"
+    price: "Price"
+    publish: "Publish"
+    published: "Published"

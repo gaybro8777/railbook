@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title ? @title : 'Rails入門' %></title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+ <%= yield :extend_menu %>
+<hr />
+...その他の固定コンテンツ...
+<hr />
+<%= yield %>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<% 0.upto(9) do |n| %>
+book<%= n %>:
+  isbn: 978-4-7741-5878-<%= n %>
+  title: 書名タイトル<%= n %>
+  price: <%= 1000 + n %>
+  publish: 出版社<%= n %>
+  published: 2016-12-31
+<% end %>

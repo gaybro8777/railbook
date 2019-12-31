@@ -1,0 +1,29 @@
+I"r(function() {
+  $(document).on('turbolinks:load', function() {
+    $('#slide_search').on('ajax:success', function(e, data) {
+      $('#result').empty();
+      return $.each(data.Slideshows.Slideshow, function() {
+        return $('#result').append($('<li></li>').append($('<a></a>').attr('href', this.URL).append(this.Title + "（" + this.Description + "）")));
+      });
+    });
+    return $(document).ajaxStart(function() {
+      return $('#progress').html('通信中...');
+    }).ajaxComplete(function() {
+      return $('#progress').html('');
+    });
+  });
+
+
+  /*
+    $('#ajax_form').on 'ajax:success', (e, data) ->
+      $('#result').empty()
+      $.each data, ->
+        $('#result').append(
+          $('<li></li>').append(
+            $('<a></a>').attr('href', 'http://www.wings.msn.to/index.php/-/A-03/' + @isbn).append(@title)
+          )
+        )
+   */
+
+}).call(this);
+:ET

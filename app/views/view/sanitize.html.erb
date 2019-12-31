@@ -1,0 +1,11 @@
+<%
+msg = <<EOL
+<p style="color:Red">Railsについて<br />質問があります。</p>
+<strong id="hoge" class="myclazz">至急</strong>
+<a href="JavaScript:alert('NG')">こちらに回答お願いします。</a>
+<a href="http://www.wings.msn.to">サポートサイト</a>
+EOL
+%>
+<%= sanitize msg %>
+<hr />
+<%= sanitize msg, tags: %w(p a), attributes: %w(id class href style) %>

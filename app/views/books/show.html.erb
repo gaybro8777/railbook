@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<!-- alertでの書き換え -->
+<!--<p id="alert"><%= alert %></p>-->
+
+<!-- flashメソッドでの書き換え -->
+<!-- <p id="notice"><%#= flash[:msg] %></p> -->
+
+<!-- infoキーでの書き換え -->
+<!-- <p id="notice"><%#= info %></p> -->
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @book.isbn %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @book.price %>
+</p>
+
+<p>
+  <strong>Publish:</strong>
+  <%= @book.publish %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @book.published %>
+</p>
+
+<p>
+  <strong>Dl:</strong>
+  <%= @book.dl %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

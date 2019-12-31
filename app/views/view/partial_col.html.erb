@@ -1,0 +1,21 @@
+<div id="list">
+
+  <%= render partial: 'books/book', collection: @books,
+    locals: { type: :details } %>
+
+  <%# collectionオプションの省略形 %> 
+  <%#= render @books, type: :details %>
+
+
+<%
+=begin
+%>
+<%# collectionオプションを利用しない場合 %>
+<% @books.each do |book| %>
+  <%= render 'books/book', book: book, type: :details %>
+<% end %>
+<%
+=end
+%>
+
+</div>

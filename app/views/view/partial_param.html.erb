@@ -1,0 +1,14 @@
+<div id="info">
+  <%= render 'books/book', book: @book, type: :details %>
+  <%#= render 'books/book', book: @book, type: :simple %>
+
+  <%# モデルを渡す場合の省略形 %>
+  <%＃= render @book ,type: :details %>
+
+  <%# パーシャルレイアウト %>
+  <%#= render partial: 'books/book', layout: 'books/frame',
+    locals: { book: @book, type: :simple }%>
+</div>
+
+
+

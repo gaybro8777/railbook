@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+modernjs_1:
+  book: modernjs
+  user: isatou
+  status: 0
+  body: JavaScriptを使うなら、まず、目を通しておきたい本ですね。
+
+modernjs_2:
+  book: modernjs
+  user: hsuzuki
+  status: 1
+  body: JavaScriptの基本を振り返りたいときにはこの本を頼りにしています。
+

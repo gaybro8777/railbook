@@ -1,0 +1,22 @@
+<%= @user.username %>さま
+<hr />
+<p>
+この度は、本サイトへユーザー登録をいただきましてありがとうございました。<br />
+以下は、登録いただいたユーザー情報です。
+</p>
+
+<ul>
+<li>ユーザー名：<%= @user.username %></li>
+<li>パスワード：（セキュリティ保護のため、伏せています）</li>
+<li>ユーザー名：<%= @user.email %></li>
+</ul>
+
+サイトをご利用いただくには、<%= link_to 'こちら', { host: 'www.example.com', controller: :books,
+  action: :index } %>からログインを行ってください。</p>
+<%#= url_for(host: 'www.example.com', controller: :books,
+  action: :index, only_path: false) %>
+
+<hr />
+<%= mail_to 'webmaster@wings.msn.to', '「サーバーサイド技術の学び舎」事務局' %>
+<%= image_tag 'http://www.wings.msn.to/image/wings.jpg', size: '53x17' %>
+<%#= image_tag attachments['wings.jpg'].url, size: '53x17' %>
